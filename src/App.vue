@@ -1,7 +1,6 @@
 <template>
   <div>
     <div id="navbar">
-
       <div class="travel_condition">
         <p class="input_describtion">遊玩類型</p>
         <select v-model="cellphone">
@@ -38,6 +37,9 @@
     <div id="attractions">
       <div class="popular">
         <p class="title">熱門選擇</p>
+        <div id="app">
+          <li v-for="item in TestCase"> {{item.name}}</li>
+        </div>
         <div>
         <div class="menu"></div>
         </div>
@@ -65,7 +67,27 @@ export default {
   name: 'App',
   components: {
     
+  },
+  data(){
+    return{
+      TestCase:[
+        {
+            name:"p",
+            location:"P"
+        },
+        {
+            name:"l",
+            location:"L"
+        },
+        {
+            name:"o",
+            location:"O"
+        }
+    ]
+    }
   }
+  
+
 }
 </script>
 
@@ -128,6 +150,7 @@ body {
   margin-left: 15px;
 
 }
+/*
 .menu {
      height: 10vh;
      width: 700px;
@@ -140,5 +163,5 @@ body {
       background-color: #5134d4;
       float: right;
  }
-
+*/
 </style>
